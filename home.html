@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopHub</title>
+        <!-- Google Font link -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+        <!-- Custom CSS link -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+    <body>
+        
+        <!-- Start Header  -->
+        <header>
+            <div class="container">
+                <!-- Start Navbar  -->
+                <nav>
+
+                    <div class="logo">
+                        <a href="home.html">
+                            <i class="fa-solid fa-shop"></i>
+                            <h2>ShopHub</h2>
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="search-box">
+                        <button type="button" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" placeholder="Search products..." />
+                    </div>
+
+                    <div class="cart-favorite-icons">
+                        <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                        <a href="cart.html" title="cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    </div>
+
+                    <i class="fa-solid fa-list list" id="list" onclick="toggleMenu()"></i>
+
+                </nav>      
+                <!-- END Navbar  -->
+                 
+            </div>
+            <div class="responsive" id="responsive">
+                <ul class="nav-links" id="mobile-links">
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+    
+                <div class="cart-favorite-icons">
+                    <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                    <a href="cart.html" title="cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+    
+            </div>
+        </header>
+
+
+        <!-- End Header  -->
+
+        <!-- Start Hero Section -->
+        
+        <section class="hero">
+            <div class="container">
+                
+                <div class="hero-content">
+                    <h2>Discover Premium Products for Your Lifestyle</h2>
+                    <p>Shop the latest trends with unbeatable quality and prices. Free shipping on orders over $50.</p>
+                      
+                    <div class="buttons-group">
+                        <a href="products.html" class="btn primary-btn">Shop Now</a>
+                        <a href="#" class="btn secondary-btn">Learn More</a>
+                    </div>
+                </div> 
+                
+                <div class="image">
+                    <img src="images/Hero.png" alt="Hero Image" />
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- End Hero Section -->
+
+        <!-- Start Best Sales Section -->
+            <section class="best-sales">
+
+                <div class="container">
+                    
+                    <h2 class="main-title">Best Sellers</h2>
+                    <p>Discover our most popular products loved by thousands</p>
+                
+                    <div class="products-container">
+                        <div class="product-card">
+                            <i class="fa-solid fa-heart favorite"></i>
+                            <img src="images/Product1.png" alt="Product 1" />
+                            <div class="card-info">
+                                <h3>Premium Wireless Headphones</h3>
+                                <p>High-quality sound with noise cancellation</p>
+                                <div class="bottom-info">
+                                    <span class="price">$99.99</span>
+                                    <i class="fa-solid fa-cart-shopping cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <i class="fa-solid fa-heart favorite"></i>
+                            <img src="images/Product2.png" alt="Product 2" />
+                            <div class="card-info">
+                                <h3> Smart Fitness Watch</h3>
+                                <p>Track your health and fitness goalss.</p>
+                                <div class="bottom-info">
+                                    <span class="price">$99.99</span>
+                                    <i class="fa-solid fa-cart-shopping cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <i class="fa-solid fa-heart favorite"></i>
+                            <img src="images/product3.png" alt="Product 3" />
+                            <div class="card-info">
+                                <h3>Ultra-Thin Laptop</h3>
+                                <p>Powerful performance in a sleek design.</p>
+                                <div class="bottom-info">
+                                    <span class="price">$99.99</span>
+                                    <i class="fa-solid fa-cart-shopping cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <i class="fa-solid fa-heart favorite"></i>
+                            <img src="images/Product4.png" alt="Product 4" />
+                            <div class="card-info">
+                                <h3>Bluetooth Speaker</h3>
+                                <p>EPremium sound quality everywhere.</p>
+                                <div class="bottom-info">
+                                    <span class="price">$99.99</span>
+                                    <i class="fa-solid fa-cart-shopping cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="products.html" class="view-products">View All Products</a>
+                </div>
+            </section>
+        
+        <!-- END Best Sales Section -->
+
+        <!-- Start ABOUT us section  -->
+        
+        <section class="about">
+            <div class="container">
+                <div class="about-image">
+                    <img src="images/about us.png" alt="About Us Image" />
+                </div>
+                <div class="about-content">
+                    <h2 class="main-title">About ShopHub</h2>
+                    <p>We're passionate about bringing you the finest selection of premium products at unbeatable prices. Our commitment to quality and customer satisfaction has made us a trusted choice for thousands of shoppers worldwide.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h3>Fast Shipping</h3>
+                           
+                        </div>
+                        <div class="feature">
+                            <i class="fa-solid fa-headset"></i>
+                            <h3>24/7 Support</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>Secure Shopping</h3>
+                        </div>
+                    </div>
+                    <a href="#" class="btn primary-btn">Learn More Abou Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- End ABOUT us section -->
+
+        <!-- Start Footer  -->
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="general-information f-sec">
+                        <h3><i class="fa-solid fa-shop"></i> ShopHub</h3>
+                        <p>Your trusted destination for premium products and exceptional shopping experience.</p>
+                        <div class="social-media">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links f-sec">
+                        <div class="link-group">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="#">Categories</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-support f-sec">
+                        <h3>Customer Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter f-sec">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on new products and exclusive offers.</p>
+                        <div class="newsletter">
+                            <input type="email" placeholder="Enter your email" />
+                            <button type="submit" title="Subscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ShopHub. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- END Footer  -->
+
+    </body>
+    <script src="javascript/home.js"></script>
+        
+    
+</html>

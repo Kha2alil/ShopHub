@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopHub</title>
+        <!-- Google Font link -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+        <!-- Custom CSS link -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+<body>
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <!-- Start Navbar  -->
+            <nav>
+
+                <div class="logo">
+                    <a href="home.html">
+                        <i class="fa-solid fa-shop"></i>
+                        <h2>ShopHub</h2>
+                    </a>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="search-box">
+                    <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search products..." />
+                </div>
+
+                <div class="cart-favorite-icons">
+                    <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                    <a href="cart.html" title="cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+                <i class="fa-solid fa-filter filter-icon" onclick="showFilter()"></i>
+                <i class="fa-solid fa-list list" id="list" onclick="toggleMenu()"></i>
+             
+
+            </nav>      
+            <!-- END Navbar  -->
+             
+        </div>
+        <div class="responsive" id="responsive">
+            <ul class="nav-links" id="mobile-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="cart-favorite-icons">
+                <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                <a href="cart.html" title="cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- End Header  -->
+
+    <!-- Start Products Content  -->
+
+    <!-- Start Header  -->
+    <div class="products">
+        <div class="products-header">
+                
+            <div class="container">
+                <span>Home > </span><span class="active">Products</span>
+                <div class="search-box">
+                    <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search products..." />
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="left">
+                    <h2>Our Products</h2>
+                    <p>Discover our complete collection of premium products</p>
+                </div>
+                <div class="right">
+                    <p>Showing <span> 1-20</span> of <span>156</span> result</p>
+                    <!-- filtrage  -->
+                    <div class="filter">
+                        <select name="sort" id="sort">
+                            <option value="default">Sort by: Featurd</option>
+                            <option value="price-low">Price : Low To High</option>
+                            <option value="price-high">Price : High To Low</option>
+                            <option value="newest">Newest first</option>
+                            <option value="best-sales">Best Selling</option>
+                        </select>
+                    </div>
+                
+                    <!-- Grid or list  -->
+                    <div class="view">
+                        <div class="toggle">
+                            <i class="fa-solid fa-border-all" id="grid-icon"></i>
+                            <i class="fa-solid fa-list" id="list-icon"></i>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <!-- End Header  -->
+    
+    <!-- Start Product grid And Filter  -->
+
+    <div class="products-container">
+        <div class="container">
+            <!-- !filter-responsive  -->
+            <div class="left-panel">
+                <div class="categories filter-group">
+                    <h3>Categories</h3>
+                    <ul class="categories-list">
+                        
+                        <li>
+                            <input type="checkbox" name="Electronic" id="Electronic">
+                            <label for="Electronic">Electronic <span>(42)</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="AudioAndVideo" id="AudioAndVideo">
+                            <label for="AudioAndVideo">Audio & Video <span>(28)</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Computers" id="Computers">
+                            <label for="Computers">Computers <span>(35)</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="SmartHome" id="SmartHome">
+                            <label for="SmartHome">Smart Home <span>(19)</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Gaming" id="Gaming">
+                            <label for="Gaming">Gaming<span>(32)</span></label>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="PriceRange filter-group">
+                    <h3>Price Range</h3>
+                    <ul class="PriceRange-list">
+
+                        <li>
+                            <input type="radio" name="PriceRange" id="Under50" title="Under 50">
+                            <label for="Under50">Under $50</label>
+                        </li>
+
+                        <li>
+                            <input type="radio" name="PriceRange" id="from50-100" title="from50-100">
+                            <label for="from50-100">$50 - $100</label>
+                        </li>
+
+                        <li>
+                            <input type="radio" name="PriceRange" id="from100-500" title="from100-500">
+                            <label for="from100-500">$100-$500</label>
+                        </li>
+
+                        <li>
+                            <input type="radio" name="PriceRange" id="Over500" title="Over500">
+                            <label for="Over500">Over $500</label>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="Brand filter-group">
+                    <h3>Brand</h3>
+                    <ul class="Brand-list">
+                        
+                        <li>
+                            <input type="checkbox" name="Apple" id="Apple">
+                            <label for="Apple">Apple</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="Microsoft" id="Microsoft">
+                            <label for="Microsoft">Microsoft</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="Sony" id="Sony">
+                            <label for="Sony">Sony</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="Apple" id="Samsung">
+                            <label for="Samsung">Samsung</label>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="clearFilters">Clear All Filters</button>
+            </div>
+
+
+            <!--! Responsive-filter  -->
+            <div class="responsive-filter">
+                <div class="close-filter">
+                    <i class="fa-solid fa-xmark" onclick="showFilter()"></i>
+                </div>
+                <div class="all-filters">
+                    <div class="categories filter-group">
+                        <h3>Categories</h3>
+                        <ul class="categories-list">
+                            
+                            <li>
+                                <input type="checkbox" name="rElectronic" id="rElectronic">
+                                <label for="rElectronic">Electronic </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rAudioAndVideo" id="rAudioAndVideo">
+                                <label for="rAudioAndVideo">Audio & Video </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rComputers" id="rComputers">
+                                <label for="rComputers">Computers </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rSmartHome" id="rSmartHome">
+                                <label for="rSmartHome">Smart Home </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rGaming" id="rGaming">
+                                <label for="rGaming">Gaming</label>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                    <div class="PriceRange filter-group">
+                        <h3>Price Range</h3>
+                        <ul class="PriceRange-list">
+    
+                            <li>
+                                <input type="radio" name="rPriceRange" id="rUnder50" title="Under 50">
+                                <label for="rUnder50">Under $50</label>
+                            </li>
+    
+                            <li>
+                                <input type="radio" name="rPriceRange" id="rfrom50-100" title="from50-100">
+                                <label for="rfrom50-100">$50 - $100</label>
+                            </li>
+    
+                            <li>
+                                <input type="radio" name="rPriceRange" id="rfrom100-500" title="from100-500">
+                                <label for="rfrom100-500">$100-$500</label>
+                            </li>
+    
+                            <li>
+                                <input type="radio" name="rPriceRange" id="rOver500" title="Over500">
+                                <label for="rOver500">Over $500</label>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                    <div class="Brand filter-group">
+                        <h3>Brand</h3>
+                        <ul class="Brand-list">
+                            
+                            <li>
+                                <input type="checkbox" name="rApple" id="rApple">
+                                <label for="rApple">Apple</label>
+                            </li>
+    
+                            <li>
+                                <input type="checkbox" name="rMicrosoft" id="rMicrosoft">
+                                <label for="rMicrosoft">Microsoft</label>
+                            </li>
+    
+                            <li>
+                                <input type="checkbox" name="rSony" id="rSony" title="Sony">
+                                <label for="rony">Sony</label>
+                            </li>
+    
+                            <li>
+                                <input type="checkbox" name="rApple" id="rSamsung">
+                                <label for="rSamsung">Samsung</label>
+                            </li>
+    
+                        </ul>
+                    </div>
+                </div>
+                
+                <button class="clearFilters">Clear All Filters</button>
+            </div>
+
+            <!--! End Responsive-filter -->
+
+            <div class="right-panel">
+                <div class="grid-products" id="grid-products">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+
+                <div class="scroll-bar-pages">
+                    <span><i class="fa-solid fa-angle-left"></i></span>
+                    <span class="numbers active">1</span>
+                    <span class="numbers">2</span>
+                    <span class="numbers">3</span>
+                    <span class="numbers">4</span>
+                    <span class="numbers">5</span>
+                    <span><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- END Products Content  -->
+
+    <!-- Start Footer  -->
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="general-information f-sec">
+                    <h3><i class="fa-solid fa-shop"></i> ShopHub</h3>
+                    <p>Your trusted destination for premium products and exceptional shopping experience.</p>
+                    <div class="social-media">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links f-sec">
+                    <div class="link-group">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-support f-sec">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter f-sec">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new products and exclusive offers.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email" />
+                        <button type="submit" title="Subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- END Footer  -->
+    
+    <!-- End Footer  -->
+</body>
+
+<script src="javascript/products.js"></script>
+<script src="javascript/products-ui.js"></script>
+<script src="javascript/home.js"></script>
+
+<script>
+
+    // Show Filter on mobile and tablet 
+    function showFilter() {
+        const leftPanel = document.querySelector('.responsive-filter');
+        let leftPanelStatus = leftPanel.style.display;
+
+        if (leftPanelStatus === 'block') {
+            leftPanel.style.display = 'none';
+        } else {
+            leftPanel.style.display = 'block';
+        }
+    }
+
+    // Clear Filter 
+    const clearBtn = document.querySelectorAll('.clearFilters');
+    clearBtn.forEach(button => {
+        button.addEventListener('click', () => {
+
+            // Clear checkboxes in the left panel
+            const leftPanel = document.querySelector('.left-panel');
+            const checkboxes = leftPanel.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // Clear radio buttons in the left panel
+            const radioButtons = leftPanel.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Clear checkboxes in the responsive filter
+            const responsiveFilter = document.querySelector('.responsive-filter');
+            const rCheckboxes = responsiveFilter.querySelectorAll('input[type="checkbox"]');
+            rCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // Clear radio buttons in the responsive filter
+            const rRadioButtons = responsiveFilter.querySelectorAll('input[type="radio"]');
+            rRadioButtons.forEach(radio => {
+                radio.checked = false;
+            });
+        });
+    });
+
+    // toggle grid and list view
+    const listBtn = document.getElementById("list-icon");
+    const gridBtn = document.getElementById("grid-icon");
+    const productsGrid = document.querySelector(".grid-products");
+
+    listBtn.addEventListener("click", () => {
+        productsGrid.classList.add("list-view");
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+        localStorage.setItem("viewMode", "list");
+    });
+
+    gridBtn.addEventListener("click", () => {
+        productsGrid.classList.remove("list-view");
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+        localStorage.setItem("viewMode", "grid");
+    });
+
+    // get the view mode from local storage 
+    const savedView = localStorage.getItem("viewMode");
+
+    if(savedView == "list") {
+        productsGrid.classList.add("list-view");
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+    }
+    else {
+        productsGrid.classList.remove("list-view");
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+    }
+
+</script>
+
+</html>

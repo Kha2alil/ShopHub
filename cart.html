@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+    
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopHub</title>
+        <!-- Google Font link -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+        <!-- Custom CSS link -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+    
+    <body>
+        <!-- Start Header  -->
+        <header>
+            <div class="container">
+                <!-- Start Navbar  -->
+                <nav>
+
+                    <div class="logo">
+                        <a href="home.html">
+                            <i class="fa-solid fa-shop"></i>
+                            <h2>ShopHub</h2>
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="search-box">
+                        <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" placeholder="Search products..." />
+                    </div>
+
+                    <div class="cart-favorite-icons">
+                        <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                        <a href="cart.html" title="cart" class="active"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    </div>
+                    <i class="fa-solid fa-list list" id="list" onclick="toggleMenu()"></i>
+                
+
+                </nav>      
+                <!-- END Navbar  -->
+                
+            </div>
+            <div class="responsive" id="responsive">
+                <ul class="nav-links" id="mobile-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="cart-favorite-icons">
+                    <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                    <a href="cart.html" title="cart" class="active"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+
+            </div>
+        </header>
+        <div class="products-header">            
+            <div class="container">
+                <span>Home > </span><span class="active">Shopping Cart</span>
+            </div>
+        </div>
+        <!-- End Header  -->
+        <div class="header-middle-cart">
+            <div class="container">
+                <div class="left">
+                    <h2>Our Products</h2>
+                    <p><span class="counter">5</span> items in your cart</p>
+                </div>    
+            </div>
+        </div>
+
+        <!-- Start Cart Items List  -->
+        
+        <div class="cart-items-list">
+            <div class="container">
+                <div class="cart-list">
+                    <div class="cart-item">
+
+                        <!-- <div class="cart-item-image">
+                            <img src="images/product1.png" alt="Product Image">
+                        </div>
+
+                        <div class="cart-item-details">
+                            <h3>Product Name 1</h3>
+                            <p>High-quality sound with noise cancellation</p>
+                            <div class="bottom-details">
+                                <p>Color: <span class="product-color">Black</span></p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="product-cart-actions">
+
+                            <div class="cart-item-remove">
+                                <button title="Remove Item" class="remove-item"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                            <div class="product-quantity">
+                                <button title="minus" class="minus-btn"><i class="fa-solid fa-minus"></i></button>
+                                <input
+                                    title="product-quantity"
+                                    type="number"
+                                    name="product-quantity"
+                                    class="product-quantity-input"
+                                    value="1"
+                                    readonly
+                                >
+                                <button title="plus" class="plus-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+    
+                            <div class="product-price">
+                                <span>$99.99</span>
+                                <span class="old-price">$399.98</span>
+                            </div>
+
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <!-- <h2>Order Summary</h2>
+
+                    <div class="summary-details">
+                        
+                        <div class="summary-item">
+                            <p id="cart-subtotal"> Subtotal <span>$499.97</span></p>
+                            <p> Shipping <span>Free</span></p>
+                        </div>
+
+                        <div class="summary-item">
+                            <p>Tax <span>$67.99</span></p>
+                            <input type="text" placeholder="Enter promo code" />
+                            <button class="apply-promo">Apply</button>
+                        </div>
+                        
+                        <div class="summary-item total">
+                            <p id="cart-grandtotal">Total <span>$747.94</span></p>
+                            <a href="checkout.html"><button title="proceed To Checkout" class="checkout-btn">Proceed To Checkout</button></a>
+                            <a href="home.html"><button title="Continue Shopping" class="shopping-btn">Continue Shopping</button></a>
+                        </div>
+
+                        <div class="summary-item">
+                            <p>we Accept:</p>
+                            <div class="payment-methods">
+                                <i class="fa-brands fa-cc-visa visa"></i>
+                                <i class="fa-brands fa-cc-mastercard mastercard"></i>
+                                <i class="fa-brands fa-cc-amex amex"></i>
+                                <i class="fa-brands fa-cc-paypal paypal"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- secure payement -->
+                    <!-- <div class="secure-payement">
+                        <i class="fa-solid fa-lock"></i>
+                        <p>Secure Payement</p>
+                    </div>
+                     -->
+                </div>
+            </div>
+        </div>
+        <!-- END Cart Items List  -->
+
+        <!-- Start Footer  -->
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="general-information f-sec">
+                        <h3><i class="fa-solid fa-shop"></i> ShopHub</h3>
+                        <p>Your trusted destination for premium products and exceptional shopping experience.</p>
+                        <div class="social-media">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links f-sec">
+                        <div class="link-group">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="#">Categories</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-support f-sec">
+                        <h3>Customer Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter f-sec">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on new products and exclusive offers.</p>
+                        <div class="newsletter">
+                            <input type="email" placeholder="Enter your email" />
+                            <button type="submit" title="Subscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ShopHub. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- END Footer  -->
+    
+    </body>
+    <script src="javascript/products.js"></script>
+    <script src="javascript/products-ui.js"></script>
+    <script src="javascript/home.js"></script>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopHub</title>
+        <!-- Google Font link -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+        <!-- Custom CSS link -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+<body>
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <!-- Start Navbar  -->
+            <nav>
+
+                <div class="logo">
+                    <a href="home.html">
+                        <i class="fa-solid fa-shop"></i>
+                        <h2>ShopHub</h2>
+                    </a>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="search-box">
+                    <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search products..." />
+                </div>
+
+                <div class="cart-favorite-icons">
+                    <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                    <a href="cart.html" title="cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+                <i class="fa-solid fa-list list" id="list" onclick="toggleMenu()"></i>
+             
+
+            </nav>      
+            <!-- END Navbar  -->
+             
+        </div>
+        <div class="responsive" id="responsive">
+            <ul class="nav-links" id="mobile-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="cart-favorite-icons">
+                <a href="favorites.html" title="Favorites"><i class="fa-solid fa-heart favorite"></i></a>
+                <a href="cart.html" title="cart" class="active"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <!-- End Header  -->
+    
+    <div class="products-header">            
+        <div class="container">
+            <span>Home > </span><span class="active">Products</span>
+            <div class="search-box">
+                <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search products..." />
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Product Details  -->
+    
+    <div class="product-details" id="product-details">
+        <div class="container">
+            <div class="product-img">
+                
+                 <img alt="Main image" width="100%" id="MainImg">
+            
+                <div class="thumbnail-img">
+                    
+                    <div class="small-img-col">
+                        <!-- <img src="images/MainDetails.png" class="small-image" width="100%" alt=""> -->
+                    </div>
+                    
+                    <div class="small-img-col">
+                        <!-- <img src="images/D2.png" class="small-image" width="100%" alt=""> -->
+                    </div>
+                    
+                    <div class="small-img-col">
+                        <!-- <img src="images/D3.png" class="small-image" width="100%" alt=""> -->
+                    </div>
+                    
+                    <div class="small-img-col">
+                        <!-- <img src="images/D4.png" class="small-image" width="100%" alt=""> -->
+                    </div>
+
+                </div>    
+
+            </div>
+
+            <div class="product-info">
+            
+                <span class="best-sales">Best Sales</span>
+                
+                <h3 id="product-title"></h3>
+                
+                <div class="prices">
+                    <span class="price" id="product-price"></span>
+                </div>
+
+                
+                <p id="product-description" class="product-description"></p>
+
+                <h4>Color</h4>
+                <div class="product-color">
+                    <label class="color color-black">
+                        <input title="black" type="radio" name="color" value="black" checked>
+                        <span></span>
+                    </label>
+                
+                    <label class="color color-white">
+                        <input title="white" type="radio" name="color" value="white">
+                        <span></span>
+                    </label>
+                
+                    <label class="color color-blue">
+                        <input title="blue" type="radio" name="color" value="blue">
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="buttons-group">
+                    
+                    <button title="Add To Cart" class="add-to-cart" id="add-to-cart-btn"> 
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                        Add To Cart
+                    </button>
+                    
+                    <a href="checkout.html">
+                        <button title="Buy Now" class="Buy-Now" id="buy-now-btn">Buy Now</button>
+                    </a>
+                    
+                    <i class="fa-solid fa-heart favorite"></i>
+                
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Fast Shipping</h3>
+                       
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Secure Shopping</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- END Product Details  -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="general-information f-sec">
+                    <h3><i class="fa-solid fa-shop"></i> ShopHub</h3>
+                    <p>Your trusted destination for premium products and exceptional shopping experience.</p>
+                    <div class="social-media">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links f-sec">
+                    <div class="link-group">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-support f-sec">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter f-sec">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new products and exclusive offers.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email" />
+                        <button type="submit" title="Subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="javascript/products.js"></script>
+<script src="javascript/products-ui.js"></script>
+<script src="javascript/home.js"></script>
+</html>
