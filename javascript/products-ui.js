@@ -11,7 +11,7 @@ if (productContainer) {
     updateCartCounter();
 }
 
-function displayProducts(products = productsData) {
+function displayProducts() {
     productContainer.innerHTML = "";
 
     productsData.forEach(product => {
@@ -273,97 +273,3 @@ window.changeQuantity = function(index, delta) {
     displayCartItems();
     updateCartCounter();
 }
-
-// Start Filter here
-function filterProducts() {
-
-    // 1. Start with all products
-    let filteredProducts = productsData;
-
-    // =========================
-    // 2. CATEGORY FILTER
-    // =========================
-    let selectedCategories = [];
-
-    let categoryCheckboxes = document.querySelectorAll(
-        ".categories-list input[type='checkbox']"
-    );
-
-    categoryCheckboxes.forEach(box => {
-        if (box.checked) {
-            selectedCategories.push(box.id);
-        }
-    });
-
-    if (selectedCategories.length > 0) {
-        filteredProducts = filteredProducts.filter(product =>
-            selectedCategories.includes(product.category)
-        );
-    }
-
-    // =========================
-    // 3. BRAND FILTER
-    // =========================
-    let selectedBrands = [];
-
-    let brandCheckboxes = document.querySelectorAll(
-        ".Brand-list input[type='checkbox']"
-    );
-
-    brandCheckboxes.forEach(box => {
-        if (box.checked) {
-            selectedBrands.push(box.id);
-        }
-    });
-
-    if (selectedBrands.length > 0) {
-        filteredProducts = filteredProducts.filter(product =>
-            selectedBrands.includes(product.brand)
-        );
-    }
-
-    // =========================
-    // 4. PRICE FILTER
-    // =========================
-    let priceRadios = document.querySelectorAll(
-        ".PriceRange-list input[type='radio']"
-    );
-
-    let selectedPrice = null;
-
-    priceRadios.forEach(radio => {
-        if (radio.checked) {
-            selectedPrice = radio.id;
-        }
-    });
-
-    if (selectedPrice === "Under50") {
-        filteredProducts = filteredProducts.filter(p => p.price < 50);
-    }
-    else if (selectedPrice === "from50-100") {
-        filteredProducts = filteredProducts.filter(
-            p => p.price >= 50 && p.price <= 100
-        );
-    }
-    else if (selectedPrice === "from100-500") {
-        filteredProducts = filteredProducts.filter(
-            p => p.price > 100 && p.price <= 500
-        );
-    }
-    else if (selectedPrice === "Over500") {
-        filteredProducts = filteredProducts.filter(p => p.price > 500);
-    }
-
-    // =========================
-    // 5. SHOW PRODUCTS
-    // =========================
-    displayProducts(filteredProducts);
-}
-
-let allFilters = document.querySelectorAll(
-    ".categories-list input, .Brand-list input, .PriceRange-list input"
-);
-
-allFilters.forEach(input => {
-    input.addEventListener("change", filterProducts);
-});
